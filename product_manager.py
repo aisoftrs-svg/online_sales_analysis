@@ -8,6 +8,16 @@ class ProductManager:
         self.products.append(product)
         print(f"Dodat proizvod: {product.name}")
 
+    def remove_product(self, product_name: str):
+        """Uklanja proizvod na osnovu imena."""
+        initial_count = len(self.products)
+        self.products = [p for p in self.products if p.name.lower() != product_name.lower()]
+
+        if len(self.products) < initial_count:
+            print(f"Proizvod '{product_name}' je uspešno uklonjen.")
+        else:
+            print(f"Proizvod '{product_name}' nije pronađen.")
+
     def display_all_products(self):
         if not self.products:
             print("Nema dostupnih proizvoda u inventaru.")
