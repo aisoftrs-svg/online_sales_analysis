@@ -1,0 +1,11 @@
+# Ignoriši konfiguracioni fajl sa osetljivim podacima
+config.json
+
+# Ignoriši sve snimke ekrana
+*.png
+*.jpg
+*.jpeg
+
+# Ignoriši Python cache fajlove
+__pycache__/
+*.pyc
